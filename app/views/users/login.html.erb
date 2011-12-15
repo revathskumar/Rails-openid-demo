@@ -1,0 +1,34 @@
+<%  
+# session[:user_id] = nil
+if signed_in? %>
+  <%= link_to "Associate another account", new_account_path %> | <%= link_to("sign out", {:controller => :users, :action => :logout}) %>
+  <br/>
+  <table border="1">
+    <tr>
+      <th>Associated Accounts</th>
+    </tr>
+    <% 
+      if @accounts
+      @accounts.each do | account |
+    %>
+    <tr>
+      <td>
+        <%= account.email %>
+      </td>
+    </tr>
+    <%
+      end
+    else
+    %>
+    <tr>
+      <td>No Other account associated</td>
+    </tr>
+    <% end %>  
+  </table>
+<%
+else
+%>
+<%= link_to "Sign in with google account", new_user_path %>
+<%
+end
+%>

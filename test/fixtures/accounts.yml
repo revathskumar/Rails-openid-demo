@@ -1,0 +1,17 @@
+# Read about fixtures at http://ar.rubyonrails.org/classes/Fixtures.html
+
+one:
+  id: 
+  user: 
+  google_identifier: MyString
+  oauth_token: MyString
+  refresh_token: MyString
+  email: MyString
+
+two:
+  id: 
+  user: 
+  google_identifier: MyString
+  oauth_token: MyString
+  refresh_token: MyString
+  email: MyString
